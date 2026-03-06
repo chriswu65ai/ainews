@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Daily News Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>AI-Powered Daily News Site</h1>
+      <p class="subtitle">Top stories, prediction markets, trends, and stocks in one view.</p>
+      <div class="controls" id="keywordControls"></div>
+    </header>
+
+    <main class="dashboard">
+      <section class="panel" aria-labelledby="news-heading">
+        <div class="panel-head">
+          <h2 id="news-heading">Top 10 News</h2>
+          <span class="panel-note">Scored by freshness + source quality</span>
+        </div>
+        <ul id="newsList" class="news-list"></ul>
+      </section>
+
+      <section class="panel" aria-labelledby="bets-heading">
+        <div class="panel-head">
+          <h2 id="bets-heading">Live Bets (Polymarket + Kalshi)</h2>
+          <span class="panel-note">Yes/No move in last 24h</span>
+        </div>
+        <ul id="betsList" class="simple-list"></ul>
+      </section>
+
+      <section class="panel" aria-labelledby="trends-heading">
+        <div class="panel-head">
+          <h2 id="trends-heading">Google Trends</h2>
+          <span class="panel-note">Keyword momentum sparkline</span>
+        </div>
+        <div id="trendsList" class="trend-list"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="stocks-heading">
+        <div class="panel-head">
+          <h2 id="stocks-heading">Stock Prices</h2>
+          <span class="panel-note">Selected AI-related equities</span>
+        </div>
+        <div id="stocksList" class="stock-list"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>
+        Milestone 1 demo with mock data. Milestone 2: replace with live APIs and backend keyword/source management.
+      </small>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
